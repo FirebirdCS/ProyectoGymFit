@@ -1,0 +1,8 @@
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.vcxproj.AssemblyReference.cache
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.vcxproj.SuggestedBindingRedirects.cache
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.exe
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.VentanaPrincipal.resources
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.vcxproj.GenerateResource.cache
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.MenuPrincipal.resources
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.VentanaCliente.resources
+C:\git\UMG\3er. Semestre\ProyectoGymFit\x64\Debug\ProyectoGymFit.VentanaInscripcion.resources
