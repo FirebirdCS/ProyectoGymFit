@@ -1,5 +1,6 @@
 #pragma once
 #include "Conexion.h"
+#include <string>
 namespace ProyectoGymFit {
 
 	using namespace System;
@@ -49,6 +50,11 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::ColumnHeader^ Id_Inscripcion;
 	private: System::Windows::Forms::ColumnHeader^ fechaInscripcion;
 	private: System::Windows::Forms::Button^ btnAcutalizarIns;
+
+
+
+
+
 
 
 	protected:
@@ -219,6 +225,7 @@ namespace ProyectoGymFit {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
 	private: System::Void btnRegresar_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
@@ -264,7 +271,7 @@ namespace ProyectoGymFit {
 	private: System::Void btnAcutalizarIns_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
 		if (String::IsNullOrEmpty(txtIdInscripcion->Text) || String::IsNullOrEmpty(dateInscripcion->Text)) {
-			MessageBox::Show("Ingresa los datos requeridos!");
+			MessageBox::Show("Ingresa tanto como un Id y una fecha!");
 		}
 		else {
 			cldatos.ActualizarInscripcion(

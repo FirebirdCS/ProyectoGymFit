@@ -41,6 +41,8 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::Button^ btnRegresar;
 	private: System::Windows::Forms::Button^ btnInscripcion;
 
+
+
 	protected:
 
 	private:

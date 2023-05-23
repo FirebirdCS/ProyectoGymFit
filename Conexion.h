@@ -1,4 +1,6 @@
 #pragma once
+#include "User.h"
+#include <list>
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Windows::Forms;
@@ -7,6 +9,8 @@ using namespace System::Drawing;
 
 using namespace Data;
 using namespace Data::SqlClient;
+
+
 
 ref class Conexion {
 	SqlConnection^ cn;
@@ -46,6 +50,7 @@ public:
 		return nullptr;
 	}
 	void InsertarInscripcion(DateTime fechaInscripcion) {
+		Conectar();
 		String^ sentencia = "INSERT INTO Inscripcion (fechaInscripcion) VALUES (@fechaIns)";
 		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
 		ejecutar->Parameters->AddWithValue("@fechaIns", fechaInscripcion);
@@ -59,17 +64,26 @@ public:
 		}
 	}
 	void ActualizarInscripcion(int id_inscripcion, DateTime fechaInscripcion) {
-		String^ sentencia = "UPDATE Inscripcion SET fechaInscripcion = @fechaIns WHERE id_inscripcion = @id_inscripcion";
-		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
-		ejecutar->Parameters->AddWithValue("@id_inscripcion", id_inscripcion);
-		ejecutar->Parameters->AddWithValue("@fechaIns", fechaInscripcion);
-		try {
-			cn->Open();
-			ejecutar->ExecuteNonQuery();
-			cn->Close();
+		Conectar();
+		if (cn == nullptr) {
+			MessageBox::Show("La conexión no está inicializada");
+			return;
 		}
-		catch (SqlException^ ex) {
-			MessageBox::Show("Error al actualizar la inscripción: " + ex->Message);
+		else {
+			String^ sentencia = "UPDATE Inscripcion SET fechaInscripcion = @fechaIns WHERE id_inscripcion = @id_inscripcion";
+			SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+			ejecutar->Parameters->AddWithValue("@id_inscripcion", id_inscripcion);
+			ejecutar->Parameters->AddWithValue("@fechaIns", fechaInscripcion);
+			try {
+				cn->Open();
+				ejecutar->ExecuteNonQuery();
+				cn->Close();
+			}
+			catch (SqlException^ ex) {
+				MessageBox::Show("Error al actualizar la inscripción: " + ex->Message);
+			}
 		}
 	}
+
+
 };
