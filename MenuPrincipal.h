@@ -1,6 +1,7 @@
 #pragma once
 #include "User.h"
 #include "VentanaCliente.h"
+#include "VentanaEmpleado.h"
 
 namespace ProyectoGymFit {
 
@@ -109,6 +110,7 @@ namespace ProyectoGymFit {
 			this->btnEmpleado->TabIndex = 3;
 			this->btnEmpleado->Text = L"Empleado";
 			this->btnEmpleado->UseVisualStyleBackColor = true;
+			this->btnEmpleado->Click += gcnew System::EventHandler(this, &MenuPrincipal::btnEmpleado_Click);
 			// 
 			// MenuPrincipal
 			// 
@@ -130,6 +132,13 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void btnCliente_Click(System::Object^ sender, System::EventArgs^ e) {
 		VentanaCliente^ fs = gcnew VentanaCliente();
+		this->Hide();
+		fs->ShowDialog();
+		this->Show();
+	}
+
+	private: System::Void btnEmpleado_Click(System::Object^ sender, System::EventArgs^ e) {
+		VentanaEmpleado^ fs = gcnew VentanaEmpleado();
 		this->Hide();
 		fs->ShowDialog();
 		this->Show();

@@ -75,7 +75,7 @@ public:
 			MessageBox::Show("Error al actualizar la inscripción: " + ex->Message);
 		}
 	}
-	void InsertarMembresia(String^ tipoMembresia, String^ tieneSpa, String^ tieneMaquinas, String^ tieneDucha, String^ tieneEntrenador, Decimal precio){
+	void InsertarMembresia(String^ tipoMembresia, String^ tieneSpa, String^ tieneMaquinas, String^ tieneDucha, String^ tieneEntrenador, Decimal precio) {
 		Conectar();
 		String^ sentencia = "INSERT INTO Membresia VALUES (@tipoMembresia, @tieneSpa, @tieneMaquinas, @tieneDucha, @tieneEntrenador, @precio)";
 		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
@@ -122,7 +122,7 @@ public:
 		ejecutar->Parameters->AddWithValue("@sede_Nombre", sede_Nombre);
 		ejecutar->Parameters->AddWithValue("@sede_Direccion", sede_Direccion);
 		ejecutar->Parameters->AddWithValue("@sede_Departamento", sede_Departamento);
-	
+
 		try {
 			cn->Open();
 			ejecutar->ExecuteNonQuery();
@@ -141,6 +141,38 @@ public:
 		ejecutar->Parameters->AddWithValue("@sede_Nombre", sede_Nombre);
 		ejecutar->Parameters->AddWithValue("@sede_Direccion", sede_Direccion);
 		ejecutar->Parameters->AddWithValue("@sede_Departamento", sede_Departamento);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al actualizar sede " + ex->Message);
+		}
+	}
+	void InsertarJornada(DateTime horaInicio, DateTime horaFinal) {
+		Conectar();
+		String^ sentencia = "INSERT INTO Jornada VALUES (@horaInicio, @horaFinal)";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@horaInicio", horaInicio);
+		ejecutar->Parameters->AddWithValue("@horaFinal", horaFinal);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al insertar la jornada: " + ex->Message);
+		}
+	}
+
+	void ActualizarJornada(int id_jornada, DateTime horaInicio, DateTime horaFinal) {
+		Conectar();
+		String^ sentencia = "UPDATE Jornada SET horaInicio = @horaI, horaFinal = @horaF WHERE id_jornada = @id_jornada";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@id_jornada", id_jornada);
+		ejecutar->Parameters->AddWithValue("@horaI", horaInicio);
+		ejecutar->Parameters->AddWithValue("@horaF", horaFinal);
 		try {
 			cn->Open();
 			ejecutar->ExecuteNonQuery();

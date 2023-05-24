@@ -71,7 +71,7 @@ namespace ProyectoGymFit {
 			// 
 			this->btnRegresar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRegresar->Location = System::Drawing::Point(421, 268);
+			this->btnRegresar->Location = System::Drawing::Point(584, 490);
 			this->btnRegresar->Name = L"btnRegresar";
 			this->btnRegresar->Size = System::Drawing::Size(189, 35);
 			this->btnRegresar->TabIndex = 0;
@@ -83,7 +83,7 @@ namespace ProyectoGymFit {
 			// 
 			this->btnInscripcion->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnInscripcion->Location = System::Drawing::Point(421, 152);
+			this->btnInscripcion->Location = System::Drawing::Point(584, 207);
 			this->btnInscripcion->Name = L"btnInscripcion";
 			this->btnInscripcion->Size = System::Drawing::Size(189, 35);
 			this->btnInscripcion->TabIndex = 1;
@@ -95,7 +95,7 @@ namespace ProyectoGymFit {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(421, 86);
+			this->button1->Location = System::Drawing::Point(584, 143);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(189, 35);
 			this->button1->TabIndex = 2;
@@ -107,7 +107,7 @@ namespace ProyectoGymFit {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(421, 216);
+			this->button2->Location = System::Drawing::Point(584, 266);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(189, 35);
 			this->button2->TabIndex = 3;
@@ -119,7 +119,7 @@ namespace ProyectoGymFit {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(673, 349);
+			this->ClientSize = System::Drawing::Size(811, 551);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->btnInscripcion);
