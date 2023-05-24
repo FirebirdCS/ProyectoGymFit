@@ -115,4 +115,39 @@ public:
 			MessageBox::Show("Error al actualizar la inscripción: " + ex->Message);
 		}
 	}
+	void InsertarSede(String^ sede_Nombre, String^ sede_Direccion, String^ sede_Departamento) {
+		Conectar();
+		String^ sentencia = "INSERT INTO Sede VALUES (@sede_Nombre, @sede_Direccion, @sede_Departamento)";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@sede_Nombre", sede_Nombre);
+		ejecutar->Parameters->AddWithValue("@sede_Direccion", sede_Direccion);
+		ejecutar->Parameters->AddWithValue("@sede_Departamento", sede_Departamento);
+	
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al insertar sede: " + ex->Message);
+		}
+	}
+
+	void ActualizarSede(int id_sede, String^ sede_Nombre, String^ sede_Direccion, String^ sede_Departamento) {
+		Conectar();
+		String^ sentencia = "UPDATE Sede SET sede_Nombre = @sede_Nombre, sede_Direccion = @sede_Direccion,sede_Departamento= @sede_Departamento  WHERE id_sede = @id_sede";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@id_sede", id_sede);
+		ejecutar->Parameters->AddWithValue("@sede_Nombre", sede_Nombre);
+		ejecutar->Parameters->AddWithValue("@sede_Direccion", sede_Direccion);
+		ejecutar->Parameters->AddWithValue("@sede_Departamento", sede_Departamento);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al actualizar sede " + ex->Message);
+		}
+	}
 };

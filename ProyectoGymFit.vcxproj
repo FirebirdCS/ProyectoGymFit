@@ -125,6 +125,7 @@
     <ClCompile Include="VentanaInscripcion.cpp" />
     <ClCompile Include="VentanaMembresia.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
+    <ClCompile Include="VentanaSede.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Conexion.h" />
@@ -144,6 +145,9 @@
     <ClInclude Include="VentanaPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="VentanaSede.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal.resx">
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaSede.resx">
+      <DependentUpon>VentanaSede.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

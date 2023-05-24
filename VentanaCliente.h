@@ -3,6 +3,7 @@
 #include "VentanaInscripcion.h"
 #include "VentanaMembresia.h"
 #include "User.h"
+#include "VentanaSede.h"
 
 namespace ProyectoGymFit {
 
@@ -42,6 +43,7 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::Button^ btnRegresar;
 	private: System::Windows::Forms::Button^ btnInscripcion;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 
 
 	protected:
@@ -62,13 +64,14 @@ namespace ProyectoGymFit {
 			this->btnRegresar = (gcnew System::Windows::Forms::Button());
 			this->btnInscripcion = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btnRegresar
 			// 
 			this->btnRegresar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRegresar->Location = System::Drawing::Point(421, 229);
+			this->btnRegresar->Location = System::Drawing::Point(421, 268);
 			this->btnRegresar->Name = L"btnRegresar";
 			this->btnRegresar->Size = System::Drawing::Size(189, 35);
 			this->btnRegresar->TabIndex = 0;
@@ -80,7 +83,7 @@ namespace ProyectoGymFit {
 			// 
 			this->btnInscripcion->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnInscripcion->Location = System::Drawing::Point(421, 158);
+			this->btnInscripcion->Location = System::Drawing::Point(421, 152);
 			this->btnInscripcion->Name = L"btnInscripcion";
 			this->btnInscripcion->Size = System::Drawing::Size(189, 35);
 			this->btnInscripcion->TabIndex = 1;
@@ -100,11 +103,24 @@ namespace ProyectoGymFit {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &VentanaCliente::button1_Click);
 			// 
+			// button2
+			// 
+			this->button2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(421, 216);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(189, 35);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"Sedes";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &VentanaCliente::button2_Click);
+			// 
 			// VentanaCliente
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(652, 306);
+			this->ClientSize = System::Drawing::Size(673, 349);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->btnInscripcion);
 			this->Controls->Add(this->btnRegresar);
@@ -130,5 +146,11 @@ namespace ProyectoGymFit {
 		fs->ShowDialog();
 		this->Show();
 	}
-	};
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	VentanaSede^ fs = gcnew VentanaSede();
+	this->Hide();
+	fs->ShowDialog();
+	this->Show();
+}
+};
 }
