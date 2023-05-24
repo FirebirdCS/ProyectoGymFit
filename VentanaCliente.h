@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VentanaInscripcion.h"
+#include "VentanaMembresia.h"
 #include "User.h"
 
 namespace ProyectoGymFit {
@@ -40,7 +41,7 @@ namespace ProyectoGymFit {
 		}
 	private: System::Windows::Forms::Button^ btnRegresar;
 	private: System::Windows::Forms::Button^ btnInscripcion;
-
+	private: System::Windows::Forms::Button^ button1;
 
 
 	protected:
@@ -60,6 +61,7 @@ namespace ProyectoGymFit {
 		{
 			this->btnRegresar = (gcnew System::Windows::Forms::Button());
 			this->btnInscripcion = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btnRegresar
@@ -86,11 +88,24 @@ namespace ProyectoGymFit {
 			this->btnInscripcion->UseVisualStyleBackColor = true;
 			this->btnInscripcion->Click += gcnew System::EventHandler(this, &VentanaCliente::btnInscripcion_Click);
 			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(421, 86);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(189, 35);
+			this->button1->TabIndex = 2;
+			this->button1->Text = L"Membresia";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &VentanaCliente::button1_Click);
+			// 
 			// VentanaCliente
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(652, 306);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->btnInscripcion);
 			this->Controls->Add(this->btnRegresar);
 			this->Name = L"VentanaCliente";
@@ -105,6 +120,12 @@ namespace ProyectoGymFit {
 	public: User^ user;
 	private: System::Void btnInscripcion_Click(System::Object^ sender, System::EventArgs^ e) {
 		VentanaInscripcion^ fs = gcnew VentanaInscripcion();
+		this->Hide();
+		fs->ShowDialog();
+		this->Show();
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		VentanaMembresia^ fs = gcnew VentanaMembresia();
 		this->Hide();
 		fs->ShowDialog();
 		this->Show();

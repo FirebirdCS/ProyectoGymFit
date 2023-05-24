@@ -123,6 +123,7 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="VentanaCliente.cpp" />
     <ClCompile Include="VentanaInscripcion.cpp" />
+    <ClCompile Include="VentanaMembresia.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +136,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaInscripcion.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaMembresia.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaPrincipal.h">
@@ -150,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaInscripcion.resx">
       <DependentUpon>VentanaInscripcion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMembresia.resx">
+      <DependentUpon>VentanaMembresia.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.h</DependentUpon>
