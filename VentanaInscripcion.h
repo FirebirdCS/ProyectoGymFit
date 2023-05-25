@@ -103,7 +103,7 @@ namespace ProyectoGymFit {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(219, 27);
+			this->label1->Location = System::Drawing::Point(262, 22);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(144, 27);
 			this->label1->TabIndex = 2;
@@ -163,9 +163,9 @@ namespace ProyectoGymFit {
 			// 
 			this->listIns->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(2) { this->Id_Inscripcion, this->fechaInscripcion });
 			this->listIns->HideSelection = false;
-			this->listIns->Location = System::Drawing::Point(72, 206);
+			this->listIns->Location = System::Drawing::Point(48, 205);
 			this->listIns->Name = L"listIns";
-			this->listIns->Size = System::Drawing::Size(544, 183);
+			this->listIns->Size = System::Drawing::Size(635, 183);
 			this->listIns->TabIndex = 9;
 			this->listIns->UseCompatibleStateImageBehavior = false;
 			this->listIns->View = System::Windows::Forms::View::Details;
@@ -173,7 +173,7 @@ namespace ProyectoGymFit {
 			// Id_Inscripcion
 			// 
 			this->Id_Inscripcion->Text = L"Id_Inscripcion";
-			this->Id_Inscripcion->Width = 137;
+			this->Id_Inscripcion->Width = 216;
 			// 
 			// fechaInscripcion
 			// 

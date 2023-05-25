@@ -182,4 +182,47 @@ public:
 			MessageBox::Show("Error al actualizar sede " + ex->Message);
 		}
 	}
+	void InsertarCliente(String^ cliente_Nombre, String^ cliente_Apellido, String^ cliente_Direccion, String^ cliente_Telefono
+		, int id_Sede, int id_Membresia, int id_Inscripcion) {
+		Conectar();
+		String^ sentencia = "INSERT INTO Cliente VALUES (@nombre, @apellido, @direccion, @telefono, @id_Sede, @id_Membresia, @id_Inscripcion)";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@nombre", cliente_Nombre);
+		ejecutar->Parameters->AddWithValue("@apellido", cliente_Apellido);
+		ejecutar->Parameters->AddWithValue("@direccion", cliente_Direccion);
+		ejecutar->Parameters->AddWithValue("@telefono", cliente_Telefono);
+		ejecutar->Parameters->AddWithValue("@id_Sede", id_Sede);
+		ejecutar->Parameters->AddWithValue("@id_Membresia", id_Membresia);
+		ejecutar->Parameters->AddWithValue("@id_Inscripcion", id_Inscripcion);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al insertar el cliente: " + ex->Message);
+		}
+	}
+	void ActualizarCliente(int id_cliente, String^ cliente_Nombre, String^ cliente_Apellido, String^ cliente_Direccion, String^ cliente_Telefono
+		, int id_Sede, int id_Membresia, int id_Inscripcion) {
+		Conectar();
+		String^ sentencia = "UPDATE CLIENTE SET cliente_Nombre = @nombre,  cliente_Apellido = @apellido, cliente_Direccion = @direccion, cliente_Telefono =  @telefono, id_Sede = @id_Sede, id_Membresia = @id_Membresia, id_Inscripcion = @id_Inscripcion WHERE id_cliente = @id_cliente";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@id_cliente", id_cliente);
+		ejecutar->Parameters->AddWithValue("@nombre", cliente_Nombre);
+		ejecutar->Parameters->AddWithValue("@apellido", cliente_Apellido);
+		ejecutar->Parameters->AddWithValue("@direccion", cliente_Direccion);
+		ejecutar->Parameters->AddWithValue("@telefono", cliente_Telefono);
+		ejecutar->Parameters->AddWithValue("@id_Sede", id_Sede);
+		ejecutar->Parameters->AddWithValue("@id_Membresia", id_Membresia);
+		ejecutar->Parameters->AddWithValue("@id_Inscripcion", id_Inscripcion);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al insertar el cliente: " + ex->Message);
+		}
+	}
 };
