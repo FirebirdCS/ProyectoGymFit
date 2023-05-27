@@ -88,14 +88,16 @@ namespace ProyectoGymFit {
 			// 
 			// btnRegresar
 			// 
+			this->btnRegresar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnRegresar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnRegresar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRegresar->Location = System::Drawing::Point(537, 448);
+			this->btnRegresar->Location = System::Drawing::Point(528, 518);
 			this->btnRegresar->Name = L"btnRegresar";
 			this->btnRegresar->Size = System::Drawing::Size(146, 35);
 			this->btnRegresar->TabIndex = 1;
 			this->btnRegresar->Text = L"Regresar";
-			this->btnRegresar->UseVisualStyleBackColor = true;
+			this->btnRegresar->UseVisualStyleBackColor = false;
 			this->btnRegresar->Click += gcnew System::EventHandler(this, &VentanaInscripcion::btnRegresar_Click);
 			// 
 			// label1
@@ -103,7 +105,7 @@ namespace ProyectoGymFit {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(262, 22);
+			this->label1->Location = System::Drawing::Point(278, 50);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(144, 27);
 			this->label1->TabIndex = 2;
@@ -114,58 +116,64 @@ namespace ProyectoGymFit {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(43, 91);
+			this->label2->Location = System::Drawing::Point(34, 134);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(180, 27);
+			this->label2->Size = System::Drawing::Size(36, 27);
 			this->label2->TabIndex = 3;
-			this->label2->Text = L"Id_Inscripcion";
+			this->label2->Text = L"Id";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(43, 137);
+			this->label3->Location = System::Drawing::Point(34, 180);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(216, 27);
+			this->label3->Size = System::Drawing::Size(252, 27);
 			this->label3->TabIndex = 4;
-			this->label3->Text = L"Fecha Inscripcion";
+			this->label3->Text = L"Fecha de Inscripcion";
+			this->label3->Click += gcnew System::EventHandler(this, &VentanaInscripcion::label3_Click);
 			// 
 			// txtIdInscripcion
 			// 
-			this->txtIdInscripcion->Location = System::Drawing::Point(296, 91);
+			this->txtIdInscripcion->Location = System::Drawing::Point(316, 134);
 			this->txtIdInscripcion->Name = L"txtIdInscripcion";
-			this->txtIdInscripcion->Size = System::Drawing::Size(251, 22);
+			this->txtIdInscripcion->Size = System::Drawing::Size(358, 22);
 			this->txtIdInscripcion->TabIndex = 5;
 			// 
 			// btnGuardarIns
 			// 
+			this->btnGuardarIns->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnGuardarIns->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnGuardarIns->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnGuardarIns->Location = System::Drawing::Point(39, 448);
+			this->btnGuardarIns->Location = System::Drawing::Point(39, 518);
 			this->btnGuardarIns->Name = L"btnGuardarIns";
 			this->btnGuardarIns->Size = System::Drawing::Size(146, 35);
 			this->btnGuardarIns->TabIndex = 7;
 			this->btnGuardarIns->Text = L"Guardar";
-			this->btnGuardarIns->UseVisualStyleBackColor = true;
+			this->btnGuardarIns->UseVisualStyleBackColor = false;
 			this->btnGuardarIns->Click += gcnew System::EventHandler(this, &VentanaInscripcion::btnGuardarIns_Click);
 			// 
 			// dateInscripcion
 			// 
 			this->dateInscripcion->CustomFormat = L"yyyy/MM/dd";
 			this->dateInscripcion->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateInscripcion->Location = System::Drawing::Point(296, 142);
+			this->dateInscripcion->Location = System::Drawing::Point(316, 185);
 			this->dateInscripcion->Name = L"dateInscripcion";
-			this->dateInscripcion->Size = System::Drawing::Size(251, 22);
+			this->dateInscripcion->Size = System::Drawing::Size(358, 22);
 			this->dateInscripcion->TabIndex = 8;
+			this->dateInscripcion->ValueChanged += gcnew System::EventHandler(this, &VentanaInscripcion::dateInscripcion_ValueChanged);
 			// 
 			// listIns
 			// 
 			this->listIns->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(2) { this->Id_Inscripcion, this->fechaInscripcion });
+			this->listIns->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->listIns->HideSelection = false;
-			this->listIns->Location = System::Drawing::Point(48, 205);
+			this->listIns->Location = System::Drawing::Point(39, 261);
 			this->listIns->Name = L"listIns";
-			this->listIns->Size = System::Drawing::Size(635, 183);
+			this->listIns->Size = System::Drawing::Size(635, 210);
 			this->listIns->TabIndex = 9;
 			this->listIns->UseCompatibleStateImageBehavior = false;
 			this->listIns->View = System::Windows::Forms::View::Details;
@@ -182,33 +190,38 @@ namespace ProyectoGymFit {
 			// 
 			// btnConsultarIns
 			// 
+			this->btnConsultarIns->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnConsultarIns->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnConsultarIns->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnConsultarIns->Location = System::Drawing::Point(208, 448);
+			this->btnConsultarIns->Location = System::Drawing::Point(199, 518);
 			this->btnConsultarIns->Name = L"btnConsultarIns";
 			this->btnConsultarIns->Size = System::Drawing::Size(146, 35);
 			this->btnConsultarIns->TabIndex = 10;
 			this->btnConsultarIns->Text = L"Consultar";
-			this->btnConsultarIns->UseVisualStyleBackColor = true;
+			this->btnConsultarIns->UseVisualStyleBackColor = false;
 			this->btnConsultarIns->Click += gcnew System::EventHandler(this, &VentanaInscripcion::btnConsultarIns_Click);
 			// 
 			// btnAcutalizarIns
 			// 
+			this->btnAcutalizarIns->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnAcutalizarIns->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnAcutalizarIns->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAcutalizarIns->Location = System::Drawing::Point(374, 448);
+			this->btnAcutalizarIns->Location = System::Drawing::Point(365, 518);
 			this->btnAcutalizarIns->Name = L"btnAcutalizarIns";
 			this->btnAcutalizarIns->Size = System::Drawing::Size(146, 35);
 			this->btnAcutalizarIns->TabIndex = 11;
 			this->btnAcutalizarIns->Text = L"Actualizar";
-			this->btnAcutalizarIns->UseVisualStyleBackColor = true;
+			this->btnAcutalizarIns->UseVisualStyleBackColor = false;
 			this->btnAcutalizarIns->Click += gcnew System::EventHandler(this, &VentanaInscripcion::btnAcutalizarIns_Click);
 			// 
 			// VentanaInscripcion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(720, 517);
+			this->BackColor = System::Drawing::Color::Gainsboro;
+			this->ClientSize = System::Drawing::Size(732, 603);
 			this->Controls->Add(this->btnAcutalizarIns);
 			this->Controls->Add(this->btnConsultarIns);
 			this->Controls->Add(this->listIns);
@@ -220,7 +233,7 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnRegresar);
 			this->Name = L"VentanaInscripcion";
-			this->Text = L"VentanaInscripcion";
+			this->Text = L"Inscripcion";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -283,5 +296,9 @@ namespace ProyectoGymFit {
 			dateInscripcion->Text = "";
 		}
 	}
-	};
+	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void dateInscripcion_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }

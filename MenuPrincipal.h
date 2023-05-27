@@ -77,7 +77,7 @@ namespace ProyectoGymFit {
 			this->label1->BackColor = System::Drawing::Color::DodgerBlue;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(537, 115);
+			this->label1->Location = System::Drawing::Point(278, 224);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(133, 44);
 			this->label1->TabIndex = 0;
@@ -89,7 +89,7 @@ namespace ProyectoGymFit {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(315, 194);
+			this->label2->Location = System::Drawing::Point(315, 277);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(60, 27);
 			this->label2->TabIndex = 1;
@@ -136,6 +136,7 @@ namespace ProyectoGymFit {
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::DodgerBlue;
+			this->panel2->Controls->Add(this->label1);
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Location = System::Drawing::Point(262, -1);
 			this->panel2->Name = L"panel2";
@@ -147,16 +148,14 @@ namespace ProyectoGymFit {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(982, 553);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel2);
 			this->Name = L"MenuPrincipal";
-			this->Text = L"MenuPrincipal";
+			this->Text = L"Menu";
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion

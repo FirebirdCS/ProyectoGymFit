@@ -140,18 +140,18 @@ namespace ProyectoGymFit {
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(22, 68);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(156, 27);
+			this->label2->Size = System::Drawing::Size(36, 27);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Id_Membresia";
+			this->label2->Text = L"Id";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(23, 117);
+			this->label3->Location = System::Drawing::Point(22, 113);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(180, 22);
+			this->label3->Size = System::Drawing::Size(216, 27);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Tipo de Membresia";
 			// 
@@ -182,7 +182,7 @@ namespace ProyectoGymFit {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(405, 68);
+			this->label6->Location = System::Drawing::Point(406, 96);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(72, 27);
 			this->label6->TabIndex = 5;
@@ -193,7 +193,7 @@ namespace ProyectoGymFit {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(405, 113);
+			this->label7->Location = System::Drawing::Point(406, 141);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(132, 27);
 			this->label7->TabIndex = 6;
@@ -204,7 +204,7 @@ namespace ProyectoGymFit {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(405, 158);
+			this->label8->Location = System::Drawing::Point(406, 186);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(84, 27);
 			this->label8->TabIndex = 7;
@@ -212,99 +212,107 @@ namespace ProyectoGymFit {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::SkyBlue;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(32, 552);
+			this->button1->Location = System::Drawing::Point(27, 536);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(146, 35);
 			this->button1->TabIndex = 16;
 			this->button1->Text = L"Guardar";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &VentanaMembresia::button1_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(232, 74);
+			this->textBox1->Location = System::Drawing::Point(249, 74);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(140, 22);
 			this->textBox1->TabIndex = 17;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(232, 119);
+			this->textBox2->Location = System::Drawing::Point(249, 118);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(140, 22);
 			this->textBox2->TabIndex = 18;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(232, 164);
+			this->textBox3->Location = System::Drawing::Point(249, 164);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(140, 22);
 			this->textBox3->TabIndex = 19;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(232, 213);
+			this->textBox4->Location = System::Drawing::Point(249, 213);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(140, 22);
 			this->textBox4->TabIndex = 20;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(557, 74);
+			this->textBox5->Location = System::Drawing::Point(551, 96);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(140, 22);
 			this->textBox5->TabIndex = 21;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(557, 119);
+			this->textBox6->Location = System::Drawing::Point(551, 141);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(140, 22);
 			this->textBox6->TabIndex = 22;
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(557, 164);
+			this->textBox7->Location = System::Drawing::Point(551, 186);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(140, 22);
 			this->textBox7->TabIndex = 23;
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::SkyBlue;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(207, 552);
+			this->button2->Location = System::Drawing::Point(201, 536);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(146, 35);
 			this->button2->TabIndex = 24;
 			this->button2->Text = L"Consultar";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &VentanaMembresia::button2_Click);
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::SkyBlue;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(382, 552);
+			this->button3->Location = System::Drawing::Point(376, 536);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(146, 35);
 			this->button3->TabIndex = 25;
 			this->button3->Text = L"Actualizar";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &VentanaMembresia::button3_Click);
 			// 
 			// button4
 			// 
+			this->button4->BackColor = System::Drawing::Color::SkyBlue;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(557, 552);
+			this->button4->Location = System::Drawing::Point(551, 536);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(146, 35);
 			this->button4->TabIndex = 26;
 			this->button4->Text = L"Regresar";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &VentanaMembresia::button4_Click);
 			// 
 			// listMem
@@ -313,24 +321,26 @@ namespace ProyectoGymFit {
 				this->id_membresia, this->tipoMembresia,
 					this->tieneSpa, this->tieneMaquinas, this->tieneDucha, this->tieneEntrenador, this->precio
 			});
+			this->listMem->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->listMem->HideSelection = false;
-			this->listMem->Location = System::Drawing::Point(41, 278);
+			this->listMem->Location = System::Drawing::Point(27, 271);
 			this->listMem->Name = L"listMem";
-			this->listMem->Size = System::Drawing::Size(662, 232);
+			this->listMem->Size = System::Drawing::Size(670, 232);
 			this->listMem->TabIndex = 27;
 			this->listMem->UseCompatibleStateImageBehavior = false;
 			this->listMem->View = System::Windows::Forms::View::Details;
 			// 
 			// id_membresia
 			// 
-			this->id_membresia->Text = L"Id Membresia";
-			this->id_membresia->Width = 106;
+			this->id_membresia->Text = L"Id";
+			this->id_membresia->Width = 44;
 			// 
 			// tipoMembresia
 			// 
 			this->tipoMembresia->Text = L"Tipo de membresia";
 			this->tipoMembresia->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->tipoMembresia->Width = 135;
+			this->tipoMembresia->Width = 174;
 			// 
 			// tieneSpa
 			// 
@@ -354,7 +364,7 @@ namespace ProyectoGymFit {
 			// 
 			this->tieneEntrenador->Text = L"Entrenador";
 			this->tieneEntrenador->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->tieneEntrenador->Width = 89;
+			this->tieneEntrenador->Width = 115;
 			// 
 			// precio
 			// 
@@ -366,7 +376,8 @@ namespace ProyectoGymFit {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(744, 622);
+			this->BackColor = System::Drawing::Color::Gainsboro;
+			this->ClientSize = System::Drawing::Size(732, 603);
 			this->Controls->Add(this->listMem);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -391,7 +402,7 @@ namespace ProyectoGymFit {
 				static_cast<System::Byte>(0)));
 			this->Name = L"VentanaMembresia";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"VentanaMembresia";
+			this->Text = L"Membresia";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

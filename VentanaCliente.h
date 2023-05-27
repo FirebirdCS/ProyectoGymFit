@@ -149,7 +149,7 @@ namespace ProyectoGymFit {
 			this->btnInscripcion->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnInscripcion->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnInscripcion->Location = System::Drawing::Point(850, 205);
+			this->btnInscripcion->Location = System::Drawing::Point(850, 278);
 			this->btnInscripcion->Name = L"btnInscripcion";
 			this->btnInscripcion->Size = System::Drawing::Size(189, 35);
 			this->btnInscripcion->TabIndex = 1;
@@ -163,7 +163,7 @@ namespace ProyectoGymFit {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(850, 141);
+			this->button1->Location = System::Drawing::Point(850, 222);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(189, 35);
 			this->button1->TabIndex = 2;
@@ -177,7 +177,7 @@ namespace ProyectoGymFit {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(850, 264);
+			this->button2->Location = System::Drawing::Point(850, 162);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(189, 35);
 			this->button2->TabIndex = 3;
@@ -232,7 +232,7 @@ namespace ProyectoGymFit {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(512, 39);
+			this->label1->Location = System::Drawing::Point(512, 37);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(96, 27);
 			this->label1->TabIndex = 14;
@@ -257,8 +257,8 @@ namespace ProyectoGymFit {
 			// 
 			// colIdCliente
 			// 
-			this->colIdCliente->Text = L"Id_Cliente";
-			this->colIdCliente->Width = 94;
+			this->colIdCliente->Text = L"Id";
+			this->colIdCliente->Width = 45;
 			// 
 			// colClienteNombre
 			// 
@@ -331,9 +331,9 @@ namespace ProyectoGymFit {
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(45, 125);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(132, 27);
+			this->label2->Size = System::Drawing::Size(36, 27);
 			this->label2->TabIndex = 16;
-			this->label2->Text = L"Id_Cliente";
+			this->label2->Text = L"Id";
 			// 
 			// label5
 			// 

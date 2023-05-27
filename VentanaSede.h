@@ -101,11 +101,11 @@ namespace ProyectoGymFit {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(321, 22);
+			this->label1->Location = System::Drawing::Point(327, 27);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(75, 29);
+			this->label1->Size = System::Drawing::Size(60, 27);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Sede";
 			this->label1->Click += gcnew System::EventHandler(this, &VentanaSede::label1_Click);
@@ -149,8 +149,10 @@ namespace ProyectoGymFit {
 				this->columnHeader1, this->columnHeader2,
 					this->columnHeader3, this->columnHeader4
 			});
+			this->listSede->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->listSede->HideSelection = false;
-			this->listSede->Location = System::Drawing::Point(53, 300);
+			this->listSede->Location = System::Drawing::Point(53, 293);
 			this->listSede->Name = L"listSede";
 			this->listSede->Size = System::Drawing::Size(632, 198);
 			this->listSede->TabIndex = 7;
@@ -179,38 +181,44 @@ namespace ProyectoGymFit {
 			// 
 			// btnactualizar
 			// 
+			this->btnactualizar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnactualizar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnactualizar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnactualizar->Location = System::Drawing::Point(375, 515);
+			this->btnactualizar->Location = System::Drawing::Point(375, 530);
 			this->btnactualizar->Name = L"btnactualizar";
 			this->btnactualizar->Size = System::Drawing::Size(146, 35);
 			this->btnactualizar->TabIndex = 29;
 			this->btnactualizar->Text = L"Actualizar";
-			this->btnactualizar->UseVisualStyleBackColor = true;
+			this->btnactualizar->UseVisualStyleBackColor = false;
 			this->btnactualizar->Click += gcnew System::EventHandler(this, &VentanaSede::btnactualizar_Click);
 			// 
 			// btnconsultar
 			// 
+			this->btnconsultar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnconsultar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnconsultar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnconsultar->Location = System::Drawing::Point(210, 515);
+			this->btnconsultar->Location = System::Drawing::Point(214, 530);
 			this->btnconsultar->Name = L"btnconsultar";
 			this->btnconsultar->Size = System::Drawing::Size(146, 35);
 			this->btnconsultar->TabIndex = 28;
 			this->btnconsultar->Text = L"Consultar";
-			this->btnconsultar->UseVisualStyleBackColor = true;
+			this->btnconsultar->UseVisualStyleBackColor = false;
 			this->btnconsultar->Click += gcnew System::EventHandler(this, &VentanaSede::btnconsultar_Click);
 			// 
 			// btnguardar
 			// 
+			this->btnguardar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnguardar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnguardar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnguardar->Location = System::Drawing::Point(53, 515);
+			this->btnguardar->Location = System::Drawing::Point(53, 530);
 			this->btnguardar->Name = L"btnguardar";
 			this->btnguardar->Size = System::Drawing::Size(146, 35);
 			this->btnguardar->TabIndex = 27;
 			this->btnguardar->Text = L"Guardar";
-			this->btnguardar->UseVisualStyleBackColor = true;
+			this->btnguardar->UseVisualStyleBackColor = false;
 			this->btnguardar->Click += gcnew System::EventHandler(this, &VentanaSede::button1_Click);
 			// 
 			// textBox1
@@ -229,7 +237,7 @@ namespace ProyectoGymFit {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(237, 241);
+			this->textBox3->Location = System::Drawing::Point(237, 231);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(397, 22);
 			this->textBox3->TabIndex = 33;
@@ -255,21 +263,24 @@ namespace ProyectoGymFit {
 			// 
 			// button4
 			// 
+			this->button4->BackColor = System::Drawing::Color::SkyBlue;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(539, 515);
+			this->button4->Location = System::Drawing::Point(539, 530);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(146, 35);
 			this->button4->TabIndex = 36;
 			this->button4->Text = L"Regresar";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &VentanaSede::button4_Click);
 			// 
 			// VentanaSede
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(729, 584);
+			this->BackColor = System::Drawing::Color::Gainsboro;
+			this->ClientSize = System::Drawing::Size(732, 603);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label5);
@@ -285,7 +296,7 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"VentanaSede";
-			this->Text = L"VentanaSede";
+			this->Text = L"Sede";
 			this->Load += gcnew System::EventHandler(this, &VentanaSede::VentanaSede_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
