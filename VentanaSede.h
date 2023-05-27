@@ -22,6 +22,7 @@ namespace ProyectoGymFit {
 			//
 			//TODO: agregar código de constructor aquí
 			//
+			this->CenterToScreen();
 		}
 
 	protected:
@@ -85,6 +86,7 @@ namespace ProyectoGymFit {
 			this->columnHeader1 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader2 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader3 = (gcnew System::Windows::Forms::ColumnHeader());
+			this->columnHeader4 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->btnactualizar = (gcnew System::Windows::Forms::Button());
 			this->btnconsultar = (gcnew System::Windows::Forms::Button());
 			this->btnguardar = (gcnew System::Windows::Forms::Button());
@@ -94,7 +96,6 @@ namespace ProyectoGymFit {
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->columnHeader4 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -102,7 +103,7 @@ namespace ProyectoGymFit {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(281, 9);
+			this->label1->Location = System::Drawing::Point(321, 22);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(75, 29);
 			this->label1->TabIndex = 0;
@@ -114,7 +115,7 @@ namespace ProyectoGymFit {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(48, 99);
+			this->label2->Location = System::Drawing::Point(48, 126);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(84, 27);
 			this->label2->TabIndex = 1;
@@ -125,7 +126,7 @@ namespace ProyectoGymFit {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(48, 151);
+			this->label3->Location = System::Drawing::Point(48, 178);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(120, 27);
 			this->label3->TabIndex = 2;
@@ -136,7 +137,7 @@ namespace ProyectoGymFit {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(48, 198);
+			this->label4->Location = System::Drawing::Point(48, 225);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(156, 27);
 			this->label4->TabIndex = 3;
@@ -149,9 +150,9 @@ namespace ProyectoGymFit {
 					this->columnHeader3, this->columnHeader4
 			});
 			this->listSede->HideSelection = false;
-			this->listSede->Location = System::Drawing::Point(53, 262);
+			this->listSede->Location = System::Drawing::Point(53, 300);
 			this->listSede->Name = L"listSede";
-			this->listSede->Size = System::Drawing::Size(581, 198);
+			this->listSede->Size = System::Drawing::Size(632, 198);
 			this->listSede->TabIndex = 7;
 			this->listSede->UseCompatibleStateImageBehavior = false;
 			this->listSede->View = System::Windows::Forms::View::Details;
@@ -171,11 +172,16 @@ namespace ProyectoGymFit {
 			this->columnHeader3->Text = L"Dirección";
 			this->columnHeader3->Width = 156;
 			// 
+			// columnHeader4
+			// 
+			this->columnHeader4->Text = L"Departamento";
+			this->columnHeader4->Width = 190;
+			// 
 			// btnactualizar
 			// 
 			this->btnactualizar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnactualizar->Location = System::Drawing::Point(357, 481);
+			this->btnactualizar->Location = System::Drawing::Point(375, 515);
 			this->btnactualizar->Name = L"btnactualizar";
 			this->btnactualizar->Size = System::Drawing::Size(146, 35);
 			this->btnactualizar->TabIndex = 29;
@@ -187,7 +193,7 @@ namespace ProyectoGymFit {
 			// 
 			this->btnconsultar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnconsultar->Location = System::Drawing::Point(182, 481);
+			this->btnconsultar->Location = System::Drawing::Point(210, 515);
 			this->btnconsultar->Name = L"btnconsultar";
 			this->btnconsultar->Size = System::Drawing::Size(146, 35);
 			this->btnconsultar->TabIndex = 28;
@@ -199,7 +205,7 @@ namespace ProyectoGymFit {
 			// 
 			this->btnguardar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnguardar->Location = System::Drawing::Point(7, 481);
+			this->btnguardar->Location = System::Drawing::Point(53, 515);
 			this->btnguardar->Name = L"btnguardar";
 			this->btnguardar->Size = System::Drawing::Size(146, 35);
 			this->btnguardar->TabIndex = 27;
@@ -209,28 +215,28 @@ namespace ProyectoGymFit {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(237, 99);
+			this->textBox1->Location = System::Drawing::Point(237, 126);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(397, 22);
 			this->textBox1->TabIndex = 31;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(237, 157);
+			this->textBox2->Location = System::Drawing::Point(237, 184);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(397, 22);
 			this->textBox2->TabIndex = 32;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(237, 214);
+			this->textBox3->Location = System::Drawing::Point(237, 241);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(397, 22);
 			this->textBox3->TabIndex = 33;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(237, 59);
+			this->textBox4->Location = System::Drawing::Point(237, 86);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(397, 22);
 			this->textBox4->TabIndex = 35;
@@ -240,7 +246,7 @@ namespace ProyectoGymFit {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(48, 59);
+			this->label5->Location = System::Drawing::Point(48, 86);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(36, 27);
 			this->label5->TabIndex = 34;
@@ -251,7 +257,7 @@ namespace ProyectoGymFit {
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(526, 481);
+			this->button4->Location = System::Drawing::Point(539, 515);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(146, 35);
 			this->button4->TabIndex = 36;
@@ -259,16 +265,11 @@ namespace ProyectoGymFit {
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &VentanaSede::button4_Click);
 			// 
-			// columnHeader4
-			// 
-			this->columnHeader4->Text = L"Departamento";
-			this->columnHeader4->Width = 190;
-			// 
 			// VentanaSede
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(697, 550);
+			this->ClientSize = System::Drawing::Size(729, 584);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label5);
@@ -305,7 +306,7 @@ namespace ProyectoGymFit {
 
 		MessageBox::Show("Registro guardado!");
 		textBox1->Text = "",
-		textBox2->Text = "";
+			textBox2->Text = "";
 		textBox3->Text = "";
 
 	}
@@ -367,8 +368,8 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void btnregresar_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
-};
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+	};
 }

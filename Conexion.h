@@ -225,4 +225,49 @@ public:
 			MessageBox::Show("Error al insertar el cliente: " + ex->Message);
 		}
 	}
+	void InsertarEmpleado(String^ empleado_Nombre, String^ empleado_Apellido, String^ empleado_Direccion, String^ empleado_Telefono
+		, DateTime fechaNac, String^ titulo, int id_sede, int id_jornada) {
+		Conectar();
+		String^ sentencia = "INSERT INTO Empleado VALUES (@nombre, @apellido, @direccion, @telefono, @fechaNac, @titulo, @id_sede, @id_jornada)";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@nombre", empleado_Nombre);
+		ejecutar->Parameters->AddWithValue("@apellido", empleado_Apellido);
+		ejecutar->Parameters->AddWithValue("@direccion", empleado_Direccion);
+		ejecutar->Parameters->AddWithValue("@telefono", empleado_Telefono);
+		ejecutar->Parameters->AddWithValue("@fechaNac", fechaNac);
+		ejecutar->Parameters->AddWithValue("@titulo", titulo);
+		ejecutar->Parameters->AddWithValue("@id_sede", id_sede);
+		ejecutar->Parameters->AddWithValue("@id_jornada", id_jornada);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al insertar el empleado: " + ex->Message);
+		}
+	}
+	void ActualizarEmpleado(int id_empleado, String^ empleado_Nombre, String^ empleado_Apellido, String^ empleado_Direccion, String^ empleado_Telefono
+		, DateTime fechaNac, String^ titulo, int id_sede, int id_jornada) {
+		Conectar();
+		String^ sentencia = "UPDATE Empleado SET empleado_Nombre = @nombre,  empleado_Apellido = @apellido, empleado_Direccion = @direccion, empleado_Telefono =  @telefono, empleado_FechaNac = @fechaNac, empleado_Titulo = @titulo, id_Sede = @id_Sede, id_Jornada = @id_Jornada WHERE id_empleado = @id_empleado";
+		SqlCommand^ ejecutar = gcnew SqlCommand(sentencia, cn);
+		ejecutar->Parameters->AddWithValue("@id_empleado", id_empleado);
+		ejecutar->Parameters->AddWithValue("@nombre", empleado_Nombre);
+		ejecutar->Parameters->AddWithValue("@apellido", empleado_Apellido);
+		ejecutar->Parameters->AddWithValue("@direccion", empleado_Direccion);
+		ejecutar->Parameters->AddWithValue("@telefono", empleado_Telefono);
+		ejecutar->Parameters->AddWithValue("@fechaNac", fechaNac);
+		ejecutar->Parameters->AddWithValue("@titulo", titulo);
+		ejecutar->Parameters->AddWithValue("@id_sede", id_sede);
+		ejecutar->Parameters->AddWithValue("@id_jornada", id_jornada);
+		try {
+			cn->Open();
+			ejecutar->ExecuteNonQuery();
+			cn->Close();
+		}
+		catch (SqlException^ ex) {
+			MessageBox::Show("Error al actualizar el empleado: " + ex->Message);
+		}
+	}
 };

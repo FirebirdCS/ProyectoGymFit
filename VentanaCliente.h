@@ -131,6 +131,8 @@ namespace ProyectoGymFit {
 			// 
 			// btnRegresar
 			// 
+			this->btnRegresar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnRegresar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnRegresar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnRegresar->Location = System::Drawing::Point(825, 604);
@@ -138,11 +140,13 @@ namespace ProyectoGymFit {
 			this->btnRegresar->Size = System::Drawing::Size(214, 35);
 			this->btnRegresar->TabIndex = 0;
 			this->btnRegresar->Text = L"Regresar";
-			this->btnRegresar->UseVisualStyleBackColor = true;
+			this->btnRegresar->UseVisualStyleBackColor = false;
 			this->btnRegresar->Click += gcnew System::EventHandler(this, &VentanaCliente::btnRegresar_Click);
 			// 
 			// btnInscripcion
 			// 
+			this->btnInscripcion->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnInscripcion->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnInscripcion->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnInscripcion->Location = System::Drawing::Point(850, 205);
@@ -150,11 +154,13 @@ namespace ProyectoGymFit {
 			this->btnInscripcion->Size = System::Drawing::Size(189, 35);
 			this->btnInscripcion->TabIndex = 1;
 			this->btnInscripcion->Text = L"Inscripcion";
-			this->btnInscripcion->UseVisualStyleBackColor = true;
+			this->btnInscripcion->UseVisualStyleBackColor = false;
 			this->btnInscripcion->Click += gcnew System::EventHandler(this, &VentanaCliente::btnInscripcion_Click);
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::SkyBlue;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(850, 141);
@@ -162,11 +168,13 @@ namespace ProyectoGymFit {
 			this->button1->Size = System::Drawing::Size(189, 35);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Membresia";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &VentanaCliente::button1_Click);
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::SkyBlue;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(850, 264);
@@ -174,11 +182,13 @@ namespace ProyectoGymFit {
 			this->button2->Size = System::Drawing::Size(189, 35);
 			this->button2->TabIndex = 3;
 			this->button2->Text = L"Sedes";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &VentanaCliente::button2_Click);
 			// 
 			// btnActualizar
 			// 
+			this->btnActualizar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnActualizar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnActualizar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnActualizar->Location = System::Drawing::Point(572, 604);
@@ -186,11 +196,13 @@ namespace ProyectoGymFit {
 			this->btnActualizar->Size = System::Drawing::Size(203, 35);
 			this->btnActualizar->TabIndex = 13;
 			this->btnActualizar->Text = L"Actualizar";
-			this->btnActualizar->UseVisualStyleBackColor = true;
+			this->btnActualizar->UseVisualStyleBackColor = false;
 			this->btnActualizar->Click += gcnew System::EventHandler(this, &VentanaCliente::btnActualizar_Click);
 			// 
 			// btnConsultar
 			// 
+			this->btnConsultar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnConsultar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnConsultar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnConsultar->Location = System::Drawing::Point(295, 604);
@@ -198,11 +210,13 @@ namespace ProyectoGymFit {
 			this->btnConsultar->Size = System::Drawing::Size(204, 35);
 			this->btnConsultar->TabIndex = 12;
 			this->btnConsultar->Text = L"Consultar";
-			this->btnConsultar->UseVisualStyleBackColor = true;
+			this->btnConsultar->UseVisualStyleBackColor = false;
 			this->btnConsultar->Click += gcnew System::EventHandler(this, &VentanaCliente::btnConsultar_Click);
 			// 
 			// btnGuardar
 			// 
+			this->btnGuardar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnGuardar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnGuardar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnGuardar->Location = System::Drawing::Point(50, 604);
@@ -210,7 +224,7 @@ namespace ProyectoGymFit {
 			this->btnGuardar->Size = System::Drawing::Size(171, 35);
 			this->btnGuardar->TabIndex = 11;
 			this->btnGuardar->Text = L"Guardar";
-			this->btnGuardar->UseVisualStyleBackColor = true;
+			this->btnGuardar->UseVisualStyleBackColor = false;
 			this->btnGuardar->Click += gcnew System::EventHandler(this, &VentanaCliente::btnGuardar_Click);
 			// 
 			// label1
@@ -218,7 +232,7 @@ namespace ProyectoGymFit {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(512, 45);
+			this->label1->Location = System::Drawing::Point(512, 39);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(96, 27);
 			this->label1->TabIndex = 14;
@@ -231,6 +245,8 @@ namespace ProyectoGymFit {
 					this->colClienteNombre, this->colClienteApellido, this->colClienteDir, this->colClienteTelefono, this->colIdSede, this->colIdMembresía,
 					this->colIdInscripcion
 			});
+			this->listClientes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->listClientes->HideSelection = false;
 			this->listClientes->Location = System::Drawing::Point(50, 364);
 			this->listClientes->Name = L"listClientes";
@@ -278,7 +294,7 @@ namespace ProyectoGymFit {
 			// 
 			this->colIdMembresía->Text = L"Id_Membresía";
 			this->colIdMembresía->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->colIdMembresía->Width = 106;
+			this->colIdMembresía->Width = 165;
 			// 
 			// colIdInscripcion
 			// 
@@ -339,7 +355,7 @@ namespace ProyectoGymFit {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(108, 27);
 			this->label6->TabIndex = 20;
-			this->label6->Text = L"Telefono";
+			this->label6->Text = L"Teléfono";
 			// 
 			// label7
 			// 
@@ -357,7 +373,7 @@ namespace ProyectoGymFit {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(452, 222);
+			this->label8->Location = System::Drawing::Point(452, 225);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(156, 27);
 			this->label8->TabIndex = 22;
@@ -368,7 +384,7 @@ namespace ProyectoGymFit {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(452, 277);
+			this->label9->Location = System::Drawing::Point(452, 282);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(180, 27);
 			this->label9->TabIndex = 23;
@@ -412,7 +428,7 @@ namespace ProyectoGymFit {
 			// cmbSede
 			// 
 			this->cmbSede->FormattingEnabled = true;
-			this->cmbSede->Location = System::Drawing::Point(587, 178);
+			this->cmbSede->Location = System::Drawing::Point(587, 175);
 			this->cmbSede->Name = L"cmbSede";
 			this->cmbSede->Size = System::Drawing::Size(223, 24);
 			this->cmbSede->TabIndex = 29;
@@ -437,6 +453,7 @@ namespace ProyectoGymFit {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Gainsboro;
 			this->ClientSize = System::Drawing::Size(1110, 666);
 			this->Controls->Add(this->cmbInscripcion);
 			this->Controls->Add(this->cmbMembresia);
@@ -550,6 +567,9 @@ namespace ProyectoGymFit {
 				MessageBox::Show("Error al ejecutar la petición: " + ex->Message);
 			}
 		}
+		void LimpiarSeleccion(ComboBox^ comboBox) {
+			comboBox->SelectedIndex = -1;
+		}
 #pragma endregion
 		int idSede, idMembresia, idInscripcion;
 	private: System::Void btnRegresar_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -656,10 +676,21 @@ namespace ProyectoGymFit {
 			idInscripcion
 		);
 		MessageBox::Show("Registro insertado correctamente!");
+		txtNombre->Text = "";
+		txtApellido->Text = "";
+		txtDireccion->Text = "";
+		txtTelefono->Text = "";
+		LimpiarSeleccion(cmbSede);
+		LimpiarSeleccion(cmbMembresia);
+		LimpiarSeleccion(cmbInscripcion);
 
 	}
 	private: System::Void btnActualizar_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
+		if (String::IsNullOrEmpty(txtIdCliente->Text) || String::IsNullOrEmpty(txtNombre->Text) || String::IsNullOrEmpty(txtApellido->Text) || String::IsNullOrEmpty(txtDireccion->Text) || String::IsNullOrEmpty(txtTelefono->Text) || String::IsNullOrEmpty(cmbSede->Text) || String::IsNullOrEmpty(cmbMembresia->Text) || String::IsNullOrEmpty(cmbInscripcion->Text)) {
+			MessageBox::Show("Ingresa los datos requeridos!");
+			return;
+		}
 		String^ selectedValue1 = safe_cast<String^>(cmbSede->SelectedItem);
 		array<String^>^ splitValues1 = selectedValue1->Split('-');
 		if (splitValues1->Length == 2) {
@@ -695,6 +726,15 @@ namespace ProyectoGymFit {
 			idInscripcion
 		);
 		MessageBox::Show("Registro actualizado correctamente!");
+		txtIdCliente->Text = "";
+		txtNombre->Text = "";
+		txtApellido->Text = "";
+		txtDireccion->Text = "";
+		txtTelefono->Text = "";
+		LimpiarSeleccion(cmbSede);
+		LimpiarSeleccion(cmbMembresia);
+		LimpiarSeleccion(cmbInscripcion);
+
 	}
 	};
 }
