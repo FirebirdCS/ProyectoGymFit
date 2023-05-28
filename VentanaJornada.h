@@ -88,14 +88,16 @@ namespace ProyectoGymFit {
 			// 
 			// btnRegresar
 			// 
+			this->btnRegresar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnRegresar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnRegresar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRegresar->Location = System::Drawing::Point(509, 470);
+			this->btnRegresar->Location = System::Drawing::Point(548, 505);
 			this->btnRegresar->Name = L"btnRegresar";
-			this->btnRegresar->Size = System::Drawing::Size(123, 35);
+			this->btnRegresar->Size = System::Drawing::Size(144, 35);
 			this->btnRegresar->TabIndex = 1;
 			this->btnRegresar->Text = L"Regresar";
-			this->btnRegresar->UseVisualStyleBackColor = true;
+			this->btnRegresar->UseVisualStyleBackColor = false;
 			this->btnRegresar->Click += gcnew System::EventHandler(this, &VentanaJornada::btnRegresar_Click);
 			// 
 			// label1
@@ -103,7 +105,7 @@ namespace ProyectoGymFit {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(273, 40);
+			this->label1->Location = System::Drawing::Point(312, 38);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(96, 27);
 			this->label1->TabIndex = 2;
@@ -138,9 +140,9 @@ namespace ProyectoGymFit {
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(36, 112);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(132, 27);
+			this->label2->Size = System::Drawing::Size(36, 27);
 			this->label2->TabIndex = 4;
-			this->label2->Text = L"Id_Jornada";
+			this->label2->Text = L"Id";
 			// 
 			// listJornada
 			// 
@@ -148,65 +150,74 @@ namespace ProyectoGymFit {
 				this->colIdJornada, this->colHoraInicio,
 					this->colHoraFin
 			});
+			this->listJornada->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->listJornada->HideSelection = false;
-			this->listJornada->Location = System::Drawing::Point(40, 260);
+			this->listJornada->Location = System::Drawing::Point(40, 294);
 			this->listJornada->Name = L"listJornada";
-			this->listJornada->Size = System::Drawing::Size(592, 172);
+			this->listJornada->Size = System::Drawing::Size(652, 172);
 			this->listJornada->TabIndex = 7;
 			this->listJornada->UseCompatibleStateImageBehavior = false;
 			this->listJornada->View = System::Windows::Forms::View::Details;
+			this->listJornada->SelectedIndexChanged += gcnew System::EventHandler(this, &VentanaJornada::listJornada_SelectedIndexChanged);
 			// 
 			// colIdJornada
 			// 
-			this->colIdJornada->Text = L"Id_Jornada";
-			this->colIdJornada->Width = 135;
+			this->colIdJornada->Text = L"Id";
+			this->colIdJornada->Width = 55;
 			// 
 			// colHoraInicio
 			// 
 			this->colHoraInicio->Text = L"Hora de Inicio";
 			this->colHoraInicio->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->colHoraInicio->Width = 98;
+			this->colHoraInicio->Width = 181;
 			// 
 			// colHoraFin
 			// 
 			this->colHoraFin->Text = L"Hora de finalización";
 			this->colHoraFin->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->colHoraFin->Width = 120;
+			this->colHoraFin->Width = 253;
 			// 
 			// btnGuardar
 			// 
+			this->btnGuardar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnGuardar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnGuardar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnGuardar->Location = System::Drawing::Point(40, 470);
+			this->btnGuardar->Location = System::Drawing::Point(40, 505);
 			this->btnGuardar->Name = L"btnGuardar";
 			this->btnGuardar->Size = System::Drawing::Size(139, 35);
 			this->btnGuardar->TabIndex = 8;
 			this->btnGuardar->Text = L"Guardar";
-			this->btnGuardar->UseVisualStyleBackColor = true;
+			this->btnGuardar->UseVisualStyleBackColor = false;
 			this->btnGuardar->Click += gcnew System::EventHandler(this, &VentanaJornada::btnGuardar_Click);
 			// 
 			// btnConsultar
 			// 
+			this->btnConsultar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnConsultar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnConsultar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnConsultar->Location = System::Drawing::Point(197, 470);
+			this->btnConsultar->Location = System::Drawing::Point(200, 505);
 			this->btnConsultar->Name = L"btnConsultar";
-			this->btnConsultar->Size = System::Drawing::Size(130, 35);
+			this->btnConsultar->Size = System::Drawing::Size(146, 35);
 			this->btnConsultar->TabIndex = 9;
 			this->btnConsultar->Text = L"Consultar";
-			this->btnConsultar->UseVisualStyleBackColor = true;
+			this->btnConsultar->UseVisualStyleBackColor = false;
 			this->btnConsultar->Click += gcnew System::EventHandler(this, &VentanaJornada::btnConsultar_Click);
 			// 
 			// btnActualizar
 			// 
+			this->btnActualizar->BackColor = System::Drawing::Color::SkyBlue;
+			this->btnActualizar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnActualizar->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnActualizar->Location = System::Drawing::Point(351, 470);
+			this->btnActualizar->Location = System::Drawing::Point(369, 505);
 			this->btnActualizar->Name = L"btnActualizar";
 			this->btnActualizar->Size = System::Drawing::Size(152, 35);
 			this->btnActualizar->TabIndex = 10;
 			this->btnActualizar->Text = L"Actualizar";
-			this->btnActualizar->UseVisualStyleBackColor = true;
+			this->btnActualizar->UseVisualStyleBackColor = false;
 			this->btnActualizar->Click += gcnew System::EventHandler(this, &VentanaJornada::btnActualizar_Click);
 			// 
 			// txtIdJornada
@@ -236,7 +247,8 @@ namespace ProyectoGymFit {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(679, 531);
+			this->BackColor = System::Drawing::Color::Gainsboro;
+			this->ClientSize = System::Drawing::Size(732, 603);
 			this->Controls->Add(this->dtpFinal);
 			this->Controls->Add(this->dtpInicio);
 			this->Controls->Add(this->txtIdJornada);
@@ -250,7 +262,7 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnRegresar);
 			this->Name = L"VentanaJornada";
-			this->Text = L"VentanaJornada";
+			this->Text = L"Jornada";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -312,5 +324,7 @@ namespace ProyectoGymFit {
 			txtIdJornada->Text = "";
 		}
 	}
-	};
+	private: System::Void listJornada_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
