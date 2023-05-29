@@ -50,6 +50,7 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::ColumnHeader^ Id_Inscripcion;
 	private: System::Windows::Forms::ColumnHeader^ fechaInscripcion;
 	private: System::Windows::Forms::Button^ btnAcutalizarIns;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 
 
@@ -72,6 +73,7 @@ namespace ProyectoGymFit {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VentanaInscripcion::typeid));
 			this->btnRegresar = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -84,6 +86,8 @@ namespace ProyectoGymFit {
 			this->fechaInscripcion = (gcnew System::Windows::Forms::ColumnHeader());
 			this->btnConsultarIns = (gcnew System::Windows::Forms::Button());
 			this->btnAcutalizarIns = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnRegresar
@@ -103,11 +107,11 @@ namespace ProyectoGymFit {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(278, 50);
+			this->label1->Location = System::Drawing::Point(278, 31);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(144, 27);
+			this->label1->Size = System::Drawing::Size(193, 37);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Inscripcion";
 			// 
@@ -216,12 +220,23 @@ namespace ProyectoGymFit {
 			this->btnAcutalizarIns->UseVisualStyleBackColor = false;
 			this->btnAcutalizarIns->Click += gcnew System::EventHandler(this, &VentanaInscripcion::btnAcutalizarIns_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(-3, -2);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(222, 95);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 34;
+			this->pictureBox1->TabStop = false;
+			// 
 			// VentanaInscripcion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Gainsboro;
 			this->ClientSize = System::Drawing::Size(732, 603);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->btnAcutalizarIns);
 			this->Controls->Add(this->btnConsultarIns);
 			this->Controls->Add(this->listIns);
@@ -232,8 +247,10 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnRegresar);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"VentanaInscripcion";
 			this->Text = L"Inscripcion";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -259,7 +276,7 @@ namespace ProyectoGymFit {
 		SqlConnectionStringBuilder^ st;
 		String^ id_inscripcion; String^ fechaInscripcion;
 		st = gcnew SqlConnectionStringBuilder();
-		st->DataSource = "localhost";
+		st->DataSource = "localhost\\SQLEXPRESS";
 		st->InitialCatalog = "dbGymFit";
 		st->IntegratedSecurity = true;
 		cn = gcnew SqlConnection(Convert::ToString(st));
@@ -298,7 +315,7 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void dateInscripcion_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void dateInscripcion_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

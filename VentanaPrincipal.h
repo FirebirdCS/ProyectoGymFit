@@ -46,6 +46,7 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::Button^ btnLogin;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
 
 	protected:
 
@@ -73,8 +74,10 @@ namespace ProyectoGymFit {
 			this->btnLogin = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// txtUsername
@@ -82,7 +85,7 @@ namespace ProyectoGymFit {
 			this->txtUsername->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->txtUsername->ForeColor = System::Drawing::Color::Gray;
-			this->txtUsername->Location = System::Drawing::Point(180, 256);
+			this->txtUsername->Location = System::Drawing::Point(190, 346);
 			this->txtUsername->Name = L"txtUsername";
 			this->txtUsername->Size = System::Drawing::Size(257, 27);
 			this->txtUsername->TabIndex = 2;
@@ -93,7 +96,7 @@ namespace ProyectoGymFit {
 			this->txtPassword->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->txtPassword->ForeColor = System::Drawing::Color::Gray;
-			this->txtPassword->Location = System::Drawing::Point(180, 311);
+			this->txtPassword->Location = System::Drawing::Point(190, 401);
 			this->txtPassword->Name = L"txtPassword";
 			this->txtPassword->PasswordChar = '*';
 			this->txtPassword->Size = System::Drawing::Size(257, 27);
@@ -106,7 +109,7 @@ namespace ProyectoGymFit {
 			this->btnLogin->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnLogin->Font = (gcnew System::Drawing::Font(L"Nirmala UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnLogin->Location = System::Drawing::Point(180, 364);
+			this->btnLogin->Location = System::Drawing::Point(190, 454);
 			this->btnLogin->Name = L"btnLogin";
 			this->btnLogin->Size = System::Drawing::Size(257, 57);
 			this->btnLogin->TabIndex = 4;
@@ -117,7 +120,7 @@ namespace ProyectoGymFit {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(90, 238);
+			this->pictureBox1->Location = System::Drawing::Point(100, 328);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(66, 58);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -127,12 +130,22 @@ namespace ProyectoGymFit {
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(90, 302);
+			this->pictureBox2->Location = System::Drawing::Point(100, 392);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(66, 58);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 6;
 			this->pictureBox2->TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(180, 84);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(230, 208);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox3->TabIndex = 7;
+			this->pictureBox3->TabStop = false;
 			// 
 			// VentanaPrincipal
 			// 
@@ -140,17 +153,20 @@ namespace ProyectoGymFit {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::SteelBlue;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(582, 703);
+			this->ClientSize = System::Drawing::Size(582, 603);
+			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->btnLogin);
 			this->Controls->Add(this->txtPassword);
 			this->Controls->Add(this->txtUsername);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"VentanaPrincipal";
 			this->Text = L"Login";
 			this->Load += gcnew System::EventHandler(this, &VentanaPrincipal::VentanaPrincipal_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

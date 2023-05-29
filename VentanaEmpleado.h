@@ -82,6 +82,7 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::ColumnHeader^ columnHeader7;
 	private: System::Windows::Forms::ColumnHeader^ columnHeader8;
 	private: System::Windows::Forms::ColumnHeader^ columnHeader9;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	private:
 		/// <summary>
@@ -96,6 +97,7 @@ namespace ProyectoGymFit {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VentanaEmpleado::typeid));
 			this->btnSede = (gcnew System::Windows::Forms::Button());
 			this->btnJornada = (gcnew System::Windows::Forms::Button());
 			this->btnActualizar = (gcnew System::Windows::Forms::Button());
@@ -131,6 +133,8 @@ namespace ProyectoGymFit {
 			this->Titulo = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->dtpFechaNac = (gcnew System::Windows::Forms::DateTimePicker());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnSede
@@ -206,11 +210,11 @@ namespace ProyectoGymFit {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(485, 37);
+			this->label1->Location = System::Drawing::Point(498, 40);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(108, 27);
+			this->label1->Size = System::Drawing::Size(145, 37);
 			this->label1->TabIndex = 18;
 			this->label1->Text = L"Empleado";
 			// 
@@ -464,12 +468,23 @@ namespace ProyectoGymFit {
 			this->dtpFechaNac->Size = System::Drawing::Size(223, 22);
 			this->dtpFechaNac->TabIndex = 52;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(-5, -4);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(223, 91);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 53;
+			this->pictureBox1->TabStop = false;
+			// 
 			// VentanaEmpleado
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Gainsboro;
 			this->ClientSize = System::Drawing::Size(1110, 666);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->dtpFechaNac);
 			this->Controls->Add(this->txtTitulo);
 			this->Controls->Add(this->Titulo);
@@ -496,9 +511,11 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->btnRegresar);
 			this->Controls->Add(this->btnJornada);
 			this->Controls->Add(this->btnSede);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"VentanaEmpleado";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Empleado";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -507,7 +524,7 @@ namespace ProyectoGymFit {
 			SqlConnection^ cn;
 			SqlConnectionStringBuilder^ st;
 			st = gcnew SqlConnectionStringBuilder();
-			st->DataSource = "localhost";
+			st->DataSource = "localhost\\SQLEXPRESS";
 			st->InitialCatalog = "dbGymFit";
 			st->IntegratedSecurity = true;
 			cn = gcnew SqlConnection(Convert::ToString(st));
@@ -534,7 +551,7 @@ namespace ProyectoGymFit {
 			SqlConnection^ cn;
 			SqlConnectionStringBuilder^ st;
 			st = gcnew SqlConnectionStringBuilder();
-			st->DataSource = "localhost";
+			st->DataSource = "localhost\\SQLEXPRESS";
 			st->InitialCatalog = "dbGymFit";
 			st->IntegratedSecurity = true;
 			cn = gcnew SqlConnection(Convert::ToString(st));

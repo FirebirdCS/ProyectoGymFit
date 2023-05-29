@@ -78,6 +78,7 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::ColumnHeader^ tieneDucha;
 	private: System::Windows::Forms::ColumnHeader^ tieneEntrenador;
 	private: System::Windows::Forms::ColumnHeader^ precio;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	protected:
 
 	private:
@@ -93,6 +94,7 @@ namespace ProyectoGymFit {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VentanaMembresia::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -120,16 +122,18 @@ namespace ProyectoGymFit {
 			this->tieneDucha = (gcnew System::Windows::Forms::ColumnHeader());
 			this->tieneEntrenador = (gcnew System::Windows::Forms::ColumnHeader());
 			this->precio = (gcnew System::Windows::Forms::ColumnHeader());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(302, 19);
+			this->label1->Location = System::Drawing::Point(287, 18);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(120, 27);
+			this->label1->Size = System::Drawing::Size(161, 37);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Membresia";
 			// 
@@ -138,7 +142,7 @@ namespace ProyectoGymFit {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(22, 68);
+			this->label2->Location = System::Drawing::Point(27, 86);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(36, 27);
 			this->label2->TabIndex = 1;
@@ -149,7 +153,7 @@ namespace ProyectoGymFit {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(22, 113);
+			this->label3->Location = System::Drawing::Point(27, 131);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(216, 27);
 			this->label3->TabIndex = 2;
@@ -160,7 +164,7 @@ namespace ProyectoGymFit {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(22, 158);
+			this->label4->Location = System::Drawing::Point(27, 176);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(48, 27);
 			this->label4->TabIndex = 3;
@@ -171,7 +175,7 @@ namespace ProyectoGymFit {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(22, 207);
+			this->label5->Location = System::Drawing::Point(27, 225);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(108, 27);
 			this->label5->TabIndex = 4;
@@ -182,7 +186,7 @@ namespace ProyectoGymFit {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(406, 96);
+			this->label6->Location = System::Drawing::Point(411, 114);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(72, 27);
 			this->label6->TabIndex = 5;
@@ -193,7 +197,7 @@ namespace ProyectoGymFit {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(406, 141);
+			this->label7->Location = System::Drawing::Point(411, 159);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(132, 27);
 			this->label7->TabIndex = 6;
@@ -204,7 +208,7 @@ namespace ProyectoGymFit {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(406, 186);
+			this->label8->Location = System::Drawing::Point(411, 204);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(84, 27);
 			this->label8->TabIndex = 7;
@@ -226,49 +230,49 @@ namespace ProyectoGymFit {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(249, 74);
+			this->textBox1->Location = System::Drawing::Point(254, 92);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(140, 22);
 			this->textBox1->TabIndex = 17;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(249, 118);
+			this->textBox2->Location = System::Drawing::Point(254, 136);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(140, 22);
 			this->textBox2->TabIndex = 18;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(249, 164);
+			this->textBox3->Location = System::Drawing::Point(254, 182);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(140, 22);
 			this->textBox3->TabIndex = 19;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(249, 213);
+			this->textBox4->Location = System::Drawing::Point(254, 231);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(140, 22);
 			this->textBox4->TabIndex = 20;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(551, 96);
+			this->textBox5->Location = System::Drawing::Point(556, 114);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(140, 22);
 			this->textBox5->TabIndex = 21;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(551, 141);
+			this->textBox6->Location = System::Drawing::Point(556, 159);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(140, 22);
 			this->textBox6->TabIndex = 22;
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(551, 186);
+			this->textBox7->Location = System::Drawing::Point(556, 204);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(140, 22);
 			this->textBox7->TabIndex = 23;
@@ -372,12 +376,23 @@ namespace ProyectoGymFit {
 			this->precio->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->precio->Width = 74;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(3, -2);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(170, 69);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 33;
+			this->pictureBox1->TabStop = false;
+			// 
 			// VentanaMembresia
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Gainsboro;
 			this->ClientSize = System::Drawing::Size(732, 603);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->listMem);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -400,9 +415,11 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->label1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"VentanaMembresia";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Membresia";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

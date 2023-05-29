@@ -52,6 +52,7 @@ namespace ProyectoGymFit {
 	private: System::Windows::Forms::TextBox^ txtIdJornada;
 	private: System::Windows::Forms::DateTimePicker^ dtpInicio;
 	private: System::Windows::Forms::DateTimePicker^ dtpFinal;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 
 	protected:
@@ -69,6 +70,7 @@ namespace ProyectoGymFit {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VentanaJornada::typeid));
 			this->btnRegresar = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -84,6 +86,8 @@ namespace ProyectoGymFit {
 			this->txtIdJornada = (gcnew System::Windows::Forms::TextBox());
 			this->dtpInicio = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dtpFinal = (gcnew System::Windows::Forms::DateTimePicker());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnRegresar
@@ -103,11 +107,11 @@ namespace ProyectoGymFit {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Cascadia Mono", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(312, 38);
+			this->label1->Location = System::Drawing::Point(320, 34);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(96, 27);
+			this->label1->Size = System::Drawing::Size(129, 37);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Jornada";
 			// 
@@ -243,12 +247,23 @@ namespace ProyectoGymFit {
 			this->dtpFinal->Size = System::Drawing::Size(259, 22);
 			this->dtpFinal->TabIndex = 13;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(-3, -4);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(229, 96);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 34;
+			this->pictureBox1->TabStop = false;
+			// 
 			// VentanaJornada
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Gainsboro;
 			this->ClientSize = System::Drawing::Size(732, 603);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->dtpFinal);
 			this->Controls->Add(this->dtpInicio);
 			this->Controls->Add(this->txtIdJornada);
@@ -261,8 +276,10 @@ namespace ProyectoGymFit {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnRegresar);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"VentanaJornada";
 			this->Text = L"Jornada";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -284,7 +301,7 @@ namespace ProyectoGymFit {
 		SqlConnectionStringBuilder^ st;
 		String^ id_jornada; String^ horaInicio; String^ horaFinal;
 		st = gcnew SqlConnectionStringBuilder();
-		st->DataSource = "localhost";
+		st->DataSource = "localhost\\SQLEXPRESS";
 		st->InitialCatalog = "dbGymFit";
 		st->IntegratedSecurity = true;
 		cn = gcnew SqlConnection(Convert::ToString(st));
@@ -326,5 +343,5 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void listJornada_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-};
+	};
 }
