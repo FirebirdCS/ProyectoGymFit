@@ -76,16 +76,16 @@ INSERT INTO Sede VALUES ('Centro Comercial Oakland Mall', 'Zona 12 Ciudad de Gua
 INSERT INTO Inscripcion VALUES ('2023-05-16')
 INSERT INTO Inscripcion VALUES ('2023/05/21')
 
-INSERT INTO Cliente VALUES ('Alvaro', 'Flores', 'Zona 17 Guatemala', '45642012', '1', '10', '1')
+INSERT INTO Cliente VALUES ('Alvaro', 'Flores', 'Zona 17 Guatemala', '45642012', '1', '1', '1')
 
 INSERT INTO Empleado VALUES ('Juan', 'Lopez', 'Zona 15 Guatemala', '21548960', '2001-12-03', 'Monitor de Crossfit', '1','1')
 
 INSERT INTO Usuario VALUES ('admin','1234');
+INSERT INTO Usuario VALUES ('admin','admin');
 INSERT INTO Usuario VALUES ('user','user12345');
+INSERT INTO Usuario VALUES ('user','user');
 
 SELECT * FROM Usuario WHERE usuario = 'admin' AND contrasenia = 'admin'
 SELECT * FROM Usuario 
 
 SELECT * FROM Inscripcion
-
-ALTER TABLE Inscripcion ALTER COLUMN fechaInscripcion DATE;
