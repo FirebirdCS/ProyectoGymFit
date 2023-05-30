@@ -473,24 +473,28 @@ namespace ProyectoGymFit {
 		this->Close();
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
 		Conexion cldatos;
-		cldatos.InsertarMembresia(
-			textBox2->Text,
-			textBox3->Text,
-			textBox4->Text,
-			textBox5->Text,
-			textBox6->Text,
-			Convert::ToDecimal(textBox7->Text)
-		);
+		if (String::IsNullOrEmpty(textBox2->Text) || String::IsNullOrEmpty(textBox3->Text) || String::IsNullOrEmpty(textBox4->Text) || String::IsNullOrEmpty(textBox5->Text) || String::IsNullOrEmpty(textBox6->Text) || String::IsNullOrEmpty(textBox7->Text)) {
+			MessageBox::Show("Ingresa los datos requeridos!");
+		}
+		else {
+			cldatos.InsertarMembresia(
+				textBox2->Text,
+				textBox3->Text,
+				textBox4->Text,
+				textBox5->Text,
+				textBox6->Text,
+				Convert::ToDecimal(textBox7->Text)
+			);
+			MessageBox::Show("Registro guardado!");
+			textBox2->Text = "";
+			textBox3->Text = "";
+			textBox4->Text = "";
+			textBox5->Text = "";
+			textBox6->Text = "";
+			textBox7->Text = "";
+		}
 
-		MessageBox::Show("Registro guardado!");
-		textBox2->Text = "";
-		textBox3->Text = "";
-		textBox4->Text = "";
-		textBox5->Text = "";
-		textBox6->Text = "";
-		textBox7->Text = "";
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
@@ -517,5 +521,5 @@ namespace ProyectoGymFit {
 			textBox7->Text = "";
 		}
 	}
-};
+	};
 }

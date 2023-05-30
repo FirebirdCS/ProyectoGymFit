@@ -596,6 +596,10 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void btnGuardar_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
+		if (String::IsNullOrEmpty(txtNombre->Text) || String::IsNullOrEmpty(txtApellido->Text) || String::IsNullOrEmpty(txtDireccion->Text) || String::IsNullOrEmpty(txtTelefono->Text) || String::IsNullOrEmpty(txtTitulo->Text) || String::IsNullOrEmpty(cmbSede->Text) || String::IsNullOrEmpty(cmbJornada->Text)) {
+			MessageBox::Show("Ingresa los datos requeridos!");
+			return;
+		}
 		String^ selectedValue1 = safe_cast<String^>(cmbSede->SelectedItem);
 		array<String^>^ splitValues1 = selectedValue1->Split('-');
 		if (splitValues1->Length == 2) {

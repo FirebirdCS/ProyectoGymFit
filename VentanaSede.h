@@ -326,17 +326,21 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
-		cldatos.InsertarSede(
-			textBox1->Text,
-			textBox2->Text,
-			textBox3->Text
-		);
-
-		MessageBox::Show("Registro guardado!");
-		textBox1->Text = "",
-			textBox2->Text = "";
-		textBox3->Text = "";
-
+		if (String::IsNullOrEmpty(textBox1->Text) || String::IsNullOrEmpty(textBox2->Text) || String::IsNullOrEmpty(textBox3->Text)) {
+			MessageBox::Show("Ingresa los datos requeridos!");
+			return;
+		}
+		else {
+			cldatos.InsertarSede(
+				textBox1->Text,
+				textBox2->Text,
+				textBox3->Text
+			);
+			MessageBox::Show("Registro guardado!");
+			textBox1->Text = "",
+				textBox2->Text = "";
+			textBox3->Text = "";
+		}
 	}
 	private: System::Void btnconsultar_Click(System::Object^ sender, System::EventArgs^ e) {
 		SqlConnection^ cn;

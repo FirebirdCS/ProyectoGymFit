@@ -262,12 +262,17 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void btnGuardarIns_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
-		cldatos.InsertarInscripcion(
-			Convert::ToDateTime(this->dateInscripcion->Text)
-		);
-		MessageBox::Show("Registro guardado!");
-		txtIdInscripcion->Text = "";
-		dateInscripcion->Text = "";
+		if (String::IsNullOrEmpty(dateInscripcion->Text)) {
+			MessageBox::Show("Ingresa una fecha!");
+		}
+		else {
+			cldatos.InsertarInscripcion(
+				Convert::ToDateTime(this->dateInscripcion->Text)
+			);
+			MessageBox::Show("Registro guardado!");
+			txtIdInscripcion->Text = "";
+			dateInscripcion->Text = "";
+		}
 	}
 
 

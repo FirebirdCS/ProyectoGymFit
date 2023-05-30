@@ -290,11 +290,16 @@ namespace ProyectoGymFit {
 	}
 	private: System::Void btnGuardar_Click(System::Object^ sender, System::EventArgs^ e) {
 		Conexion cldatos;
-		cldatos.InsertarJornada(
-			Convert::ToDateTime(this->dtpInicio->Text),
-			Convert::ToDateTime(this->dtpFinal->Text)
-		);
-		MessageBox::Show("Registro guardado!");
+		if (String::IsNullOrEmpty(dtpInicio->Text) || String::IsNullOrEmpty(dtpFinal->Text)) {
+			MessageBox::Show("Ingresa ambas horas!");
+		}
+		else {
+			cldatos.InsertarJornada(
+				Convert::ToDateTime(this->dtpInicio->Text),
+				Convert::ToDateTime(this->dtpFinal->Text)
+			);
+			MessageBox::Show("Registro guardado!");
+		}
 	}
 	private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
 		SqlConnection^ cn;
